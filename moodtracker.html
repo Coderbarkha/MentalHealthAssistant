@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="moodtracker.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="homepage.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="resources.html">Resources</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="moodtracker.html">Mood Tracker</a>
+        </nav>
+    </header>
+
+    <section id="mood-form">
+        <h2>Track Your Mood</h2>
+        <form id="moodForm">
+            <label for="moodSelect">How do you feel?</label>
+            <select id="moodSelect" name="mood">
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+                <option value="Angry">Angry</option>
+                <option value="Calm">Calm</option>
+            </select>
+            <button type="submit">Track Mood</button>
+        </form>
+
+        <div id="moodHistory"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are dedicated to supporting mental health awareness and providing resources to help you thrive.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html" target="_self">About Us</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@mentalhealth.com</p>
+                <p>Phone: +1 123-456-7890</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="https://instagram.com/"><img src="instagram-icon.jfif" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Mental Health. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="signup.js"></script>
+<!-- Chatbot Section -->
+<section id="chatbot" class="section">
+    <!-- Chat Button to open the chat -->
+    <button id="chatButton">
+        <img src="chatbot.webp" alt="Chat Icon" id="chatIcon">
+    </button>
+
+    <!-- Chatbox that contains the Dialogflow iframe -->
+    <div id="chatbox" class="hidden">
+        <!-- Dialogflow Chatbot iframe -->
+        <iframe
+            width="350"
+            height="430"
+            allow="microphone;"
+            id="dialogflow-iframe"
+            src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"
+            style="border:none;"></iframe>
+        
+        <!-- Close Button -->
+        <button id="close-chat">Close</button>
+    </div>
+</section>
+
+<!-- Chat Button (Visible Always) -->
+<!--<button id="chatButton">
+<img src="chatbot.webp" alt="Chat Button" />
+</button>-->
+<script src="chatbot.js"></script>
+
+    <script src="moodtracker.js"></script>
+</body>
+</html>

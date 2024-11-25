@@ -1,0 +1,156 @@
+/* Chat Button (fixed on the right side of the page) */
+body{
+    font-family:'Dancing Script',cursive;
+    background: linear-gradient(135deg, #FEDB74 40%, #FF8126 70%, #FB5D46 100%);
+
+}
+  
+.container{
+    
+    color:black;
+    height:700px;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 60px;
+    border: 1px solid orange;
+    border-radius: 22px;
+    background: linear-gradient(90deg, #FFE8C7, #FEDB74);
+color: #444444;
+
+}
+a{
+    color:black;
+    text-decoration: none;
+    font-size: 28px;
+}
+/* Style for the button fixed on the right bottom of the page */
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Ensure the chat icon image has the correct size */
+#chatIcon {
+    width: 30px;  /* Set the image width */
+    height: 30px; /* Set the image height */
+}
+
+/* Style for the chatbox that will show the iframe */
+#chatbox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    padding: 15px;
+    width: 350px;
+    height: 450px;  /* Adjust height for iframe */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button styling */
+#close-chat {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Styling the "close" button when hovered */
+#close-chat:hover {
+    background-color: #d32f2f;
+}
+
+.footer {
+    background-color: #2C3E50;
+    color: #FEDB74;
+
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #FEDB74;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF8126;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid #FF8126;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
