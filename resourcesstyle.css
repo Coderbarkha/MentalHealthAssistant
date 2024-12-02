@@ -1,158 +1,215 @@
-body{
-    font-family:'Dancing Script',cursive;
-background: linear-gradient(135deg, #FEDB74 40%, #FF8126 70%, #FB5D46 100%);
-font-size: 30px;
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6fc;
+    color: #333;
 }
-.navigation{
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff; /* White background for navigation */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     display: flex;
-justify-content: center;
-justify-content: space-evenly;
-height: 50px;
-font-size: 40px;
-background: linear-gradient(90deg, #FFE8C7, #FEDB74);
-color: #444444;
-border: 1px solid orange;
-border-radius: 22px;
-}
-a{
-color:black;
-text-decoration: none;
-font-size: 28px;
-}
-.footer {
-background-color: #2C3E50;
-color: #FEDB74;
-
-
-padding: 40px 20px;
-text-align: center;
+    justify-content: center;
 }
 
-.footer-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: start;
-max-width: 1200px;
-margin: 0 auto;
-gap: 20px;
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-section {
-flex: 1;
-min-width: 250px;
-margin: 20px;
+.navbar li {
+    list-style-type: none;
+    margin: 0 25px;
 }
 
-.footer-section h3 {
-font-size: 24px;
-margin-bottom: 15px;
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #6a6a6a; /* Soft gray text */
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.footer-section p, .footer-section ul {
-font-size: 16px;
-line-height: 1.6;
+.navbar a:hover {
+    color: #6ca6b9; /* Soft blue */
+    transform: scale(1.1);
 }
 
-.footer-section ul {
-list-style: none;
-padding: 0;
+.nav-links a:hover,
+.nav-links .active {
+    color: #1abc9c;
 }
 
-.footer-section ul li {
-margin-bottom: 10px;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #e3f2fd;
 }
 
-.footer-section ul li a {
-color: #FEDB74;
-text-decoration: none;
-transition: color 0.3s ease;
+.hero-text {
+    max-width: 50%;
 }
 
-.footer-section ul li a:hover {
-color: #FF8126;
+.hero-text h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-.social-icons {
-margin-top: 15px;
+.hero-text p {
+    font-size: 18px;
+    color: #555;
 }
 
-.social-icons a {
-display: inline-block;
-margin-right: 10px;
-transition: transform 0.3s ease;
+.hero-image img {
+    max-width: 100%;
 }
 
-.social-icons a img {
-height: 32px;
-width: 32px;
-border-radius: 50%;
-}
-
-.social-icons a:hover {
-transform: scale(1.2);
-}
-
-.footer-bottom {
-border-top: 1px solid #FF8126;
-padding-top: 20px;
-margin-top: 20px;
-font-size: 14px;
-}
-#resources {
-background-color: #E6F7F1; /* Light, soft background */
-padding: 40px;
-text-align: center;
-font-family: 'Dancing Script', cursive;
-color: #333;
+/* Resources Section */
+.resources {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .resources h2 {
-font-size: 36px;
-color: #006F68; /* Calming teal for headings */
-margin-bottom: 20px;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-.resources p {
-font-size: 18px;
-margin-bottom: 30px;
+.resource-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.resources-content {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
-gap: 30px;
+.resource-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
 }
 
-.resource-item {
-background-color: #FFF;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.resource-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
 }
 
-.resource-item h3 {
-font-size: 24px;
-color: #FF6F61; /* Soft coral for subheadings */
-margin-bottom: 15px;
+.resource-card h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
-.resource-item ul {
-list-style: none;
-padding-left: 0;
+.resource-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.resource-item ul li {
-font-size: 16px;
-margin: 10px 0;
+.resource-card .btn {
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.resource-item a {
-text-decoration: none;
-color: #006F68; /* Calming teal color for links */
-font-weight: bold;
+.resource-card .btn:hover {
+    background-color: #16a085;
 }
 
-.resource-item a:hover {
-color: #FF6F61; /* Soft coral color for hover effect */
+/* Footer Section */
+footer {
+    background-color: #f5f5f5; /* Light gray background for footer */
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #6ca6b9;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #3e7a87;
+}
+
+.footer-img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #3e7a87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
 }

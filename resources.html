@@ -3,127 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resources</title>
     <link rel="stylesheet" href="resourcesstyle.css">
-    <link rel="stylesheet" href="chatbot.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <nav class="navigation">
-        <a href="homepage.html" target="_self">Home</a>
-        <a href="aboutus.html" target="_self">About Us</a>
-        <a href="resources.html" target="_self">Resources</a>
-        <a href="contactus.html" target="_self">Contact Us</a>
-        <a href="moodtracker.html" target="_self">Mood Tracker</a>
-        <!-- Login/Signup -->
-        <a href="loginform.html" target="_self">Login</a> /
-        <a href="signupform.html" target="_self">Signup</a>
-    </nav>
-        <br><br><br>
-    <section id="resources" class="resources">
-        <h2>Helpful Resources</h2>
-        <p>Explore articles, videos, and helplines to support your mental health journey.</p>
-    
-        <div class="resources-content">
-            <div class="resource-item">
-                <h3>Articles on Mental Health</h3>
-                <ul>
-                    <li><a href="https://www.psychologytoday.com/us/basics/mental-health" target="_blank">Psychology Today - Mental Health Basics</a></li>
-                    <li><a href="https://www.mentalhealth.gov" target="_blank">MentalHealth.gov - Resources for Mental Health</a></li>
-                    <li><a href="https://www.nami.org/Your-Journey" target="_blank">NAMI - Resources for Mental Health</a></li>
-                </ul>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <ul class="navbar">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="moodtracker.html">Mood Tracker</a></li>
+                <li><a href="signupform.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore Resources for Better Mental Health</h1>
+            <p>Find curated articles, videos, and tools to support your journey toward emotional well-being.</p>
+        </div>
+        <div class="hero-image">
+            <img src="mentalhealthresource.avif" alt="Mental health resources illustration">
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <h2>What We Offer</h2>
+        <div class="resource-cards">
+            <div class="resource-card">
+                <img src="article.avif" alt="Articles">
+                <h3>Informative Articles</h3>
+                <p>Access well-researched articles on mental health topics, including stress management, anxiety, and mindfulness.</p>
+                <a href="readmore.html" class="btn">Read More</a>
             </div>
-    
-            <div class="resource-item">
+            <div class="resource-card">
+                <img src="video.avif" alt="Videos">
                 <h3>Supportive Videos</h3>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=4pKfM8p5K0k" target="_blank">Understanding Mental Health</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=fejrgE6hKH0" target="_blank">How to Deal with Anxiety</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ugW5cWDAigk" target="_blank">How to Cope with Depression</a></li>
-                </ul>
+                <p>Watch engaging and informative videos to learn practical ways to improve your mental well-being.</p>
+                <a href="watchvideos.html" class="btn">Watch Videos</a>
             </div>
-    
-            <div class="resource-item">
+            <div class="resource-card">
+                <img src="helpline.avif" alt="Helplines">
                 <h3>Emergency Helplines</h3>
-                <ul>
-                    <li><a href="tel:+1234567890">National Suicide Prevention Lifeline: +1-800-273-TALK (8255)</a></li>
-                    <li><a href="tel:+18002738255">Crisis Text Line: Text HOME to 741741</a></li>
-                    <li><a href="tel:+1800144355">National Helpline for Mental Health: 1-800-662-HELP</a></li>
-                </ul>
-            </div>
-    
-            <div class="resource-item">
-                <h3>Downloadable Resources</h3>
-                <ul>
-                    <li><a href="https://www.example.com/stress-management-guide.pdf" target="_blank">Stress Management Guide (PDF)</a></li>
-                    <li><a href="https://www.example.com/mental-health-self-care-checklist.pdf" target="_blank">Self-Care Checklist (PDF)</a></li>
-                    <li><a href="https://www.example.com/meditation-guide.pdf" target="_blank">Meditation Guide (PDF)</a></li>
-                </ul>
+                <p>Connect with trusted professionals and helplines to get the help you need when it matters most.</p>
+                <a href="gethelp.html" class="btn">Get Help</a>
             </div>
         </div>
     </section>
-    <br><br><br><br><br>
+
+    <!-- Additional Content -->
+    <section class="additional-resources">
+        <h2>More Resources</h2>
+        <div class="additional-content">
+            <div class="additional-item">
+                <img src="grief.avif" alt="Guides">
+                <h3>Downloadable Guides</h3>
+                <p>Download free guides on meditation, self-care, and coping strategies to practice daily.</p>
+                <a href="downloadguides.html" class="btn">Download Guides</a>
+            </div>
+            <div class="additional-item">
+                <img src="community.avif" alt="Community">
+                <h3>Community Forums</h3>
+                <p>Join a supportive community of people who share their experiences and uplift each other.</p>
+                <a href="joinforum.html" class="btn">Join Forum</a>
+            </div>
+            <div class="additional-item">
+                <img src="app.avif" alt="App">
+                <h3>Mental Health Apps</h3>
+                <p>Discover apps designed to track your mood, meditate, and manage mental stress.</p>
+                <a href="exploreapp.html" class="btn">Explore Apps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section about">
+            <div class="footer-section">
                 <h3>About Us</h3>
-                <p>We are dedicated to supporting mental health awareness and providing resources to help you thrive.</p>
+                <p>Your mental health is our priority. Let's build a better tomorrow, together.</p>
             </div>
-            <div class="footer-section links">
+            <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="homepage.html">Home</a></li>
-                    <li><a href="aboutus.html" target="_self">About Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="footer-section contact">
+            <div class="footer-section">
                 <h3>Contact Us</h3>
                 <p>Email: support@mentalhealth.com</p>
                 <p>Phone: +1 123-456-7890</p>
-                <div class="social-icons">
-                    <a href="https://Facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/"><img src="twitter-icon.png" alt="Twitter"></a>
-                    <a href="https://instagram.com/"><img src="instagram-icon.jfif" alt="Instagram"></a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Your Mental Health. All rights reserved.</p>
+            <p>&copy; 2024 Mental Health. All rights reserved.</p>
         </div>
     </footer>
-    
-<!-- Chatbot Section -->
-<section id="chatbot" class="section">
-    <!-- Chat Button to open the chat -->
-    <button id="chatButton">
-        <img src="chatbot.webp" alt="Chat Icon" id="chatIcon">
-    </button>
-
-    <!-- Chatbox that contains the Dialogflow iframe -->
-    <div id="chatbox" class="hidden">
-        <!-- Dialogflow Chatbot iframe -->
-        <iframe
-            width="350"
-            height="430"
-            allow="microphone;"
-            id="dialogflow-iframe"
-            src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"
-            style="border:none;"></iframe>
-        
-        <!-- Close Button -->
-        <button id="close-chat">Close</button>
-    </div>
-</section>
-
-<!-- Chat Button (Visible Always) -->
-<!--<button id="chatButton">
-<img src="chatbot.webp" alt="Chat Button" />
-</button>-->
-<script src="chatbot.js"></script>
-
 </body>
 </html>

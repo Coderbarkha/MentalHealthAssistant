@@ -1,95 +1,201 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Neutral light gray background */
+    margin: 0;
+    padding: 0;
+    color: #555555; /* Dark gray text color for readability */
+    line-height: 1.6;
 }
-body{
-    font-family:'Dancing Script',cursive;
-    background: linear-gradient(135deg, #FEDB74 40%, #FF8126 70%, #FB5D46 100%);
 
+/* Page Container */
+.page-container {
+    width: 100%;
+    margin: 0 auto;
 }
-  
-.container{
-    
-    color:black;
-    height:700px;
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff; /* White background for navigation */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.navigation{
+
+.navbar {
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
-    height: 60px;
-    border: 1px solid orange;
-    border-radius: 22px;
-    background: linear-gradient(90deg, #FFE8C7, #FEDB74);
-color: #444444;
-
 }
-a{
-    color:black;
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 25px;
+}
+
+.navbar a {
     text-decoration: none;
-    font-size: 28px;
-}
-.heading{
-    text-align: center;
-    padding: 70px 0;
-    height:300px;
-    font-size: 70px;
+    font-size: 18px;
+    color: #6a6a6a; /* Soft gray text */
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.hope{
-    margin-left: 1150px;
-    font-size: 23px;
-    margin-top: 50px;
+.navbar a:hover {
+    color: #6ca6b9; /* Soft blue */
+    transform: scale(1.1);
 }
-.motivate{
-    height:90px;
+
+/* Hero Section */
+.hero {
+    background-color: #e8f7f5; /* Light background color */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.hero-img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight Section (Your Mental Health Matters) */
+.highlight-container {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.highlight-box {
+    background-color: #ffffff;
+    border-left: 10px solid #6ca6b9; /* Soft blue accent */
+    padding: 20px;
     font-size: 30px;
-}
-.heading .homepage-image{
-    height:340px;
-    width:350px;
-    border-radius: 32px;
-    margin-left: 500px;
-    margin-top: 28px;
-}
-.grief{
-    height:180px;
-    margin-top: 100px;
-    margin-left: 520px;
-}
-.footer {
-    background-color: #2C3E50;
-    color: #FEDB74;
-
-    padding: 40px 20px;
+    font-weight: 500;
+    color: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
     text-align: center;
+}
+
+/* Quote Section */
+.quote-container {
+    margin-top: 50px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.quote-box {
+    background-color: #ffffff;
+    border-left: 10px solid #6ca6b9; /* Soft blue accent */
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555555;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.quote-box p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Resources Section */
+.resources-section {
+    background-color: #e8f7f5; /* Light pastel background for Resources */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.resources-section h2 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.resources-section p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resource-item {
+    background-color: #6ca6b9; /* Soft blue background for resources links */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.resource-item:hover {
+    background-color: #4f8c99;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #f5f5f5; /* Light gray background for footer */
+    padding: 40px 20px;
+    margin-top: 60px;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
+    gap: 40px;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 250px;
-    margin: 20px;
+    text-align: left;
 }
 
 .footer-section h3 {
     font-size: 24px;
-    margin-bottom: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.footer-section p, .footer-section ul {
+.footer-section p {
     font-size: 16px;
-    line-height: 1.6;
+    font-weight: 400;
+    color: #555555;
 }
 
 .footer-section ul {
@@ -102,45 +208,57 @@ a{
 }
 
 .footer-section ul li a {
-    color: #FEDB74;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #6ca6b9;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #FF8126;
+    color: #3e7a87;
 }
 
-.social-icons {
+.footer-img {
+    width: 100%;
+    height: auto;
     margin-top: 15px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a img {
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-}
-
-.footer-bottom {
-    border-top: 1px solid #FF8126;
-    padding-top: 20px;
-    margin-top: 20px;
-    font-size: 14px;
-}
-iframe {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border: none;
     border-radius: 8px;
-  }
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #3e7a87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quote-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .resource-links {
+        flex-direction: column;
+    }
+}

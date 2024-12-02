@@ -1,68 +1,48 @@
-document.getElementById('moodForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const mood = document.getElementById('moodSelect').value;
-  const token = 'user_token'; // Replace with actual token from login
-  
-  const res = await fetch('http://localhost:5000/addMood', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ token, mood })
-  });
-  
-  const data = await res.json();
-  console.log(data);
+document.getElementById('mood-form').addEventListener('submit', function(e) {
+    e.preventDefault();  // Prevent the form from submitting
+
+    const moodInput = document.getElementById('mood').value;
+    
+    if (moodInput) {
+        // Create a new mood entry with the current date
+        const moodEntry = {
+            date: new Date().toLocaleDateString(),
+            mood: moodInput
+        };
+
+        // Get existing mood data from localStorage or initialize as an empty array
+        let moodData = JSON.parse(localStorage.getItem('moodData')) || [];
+
+        // Add the new mood entry to the moodData array
+        moodData.unshift(moodEntry); // Using unshift to add the new mood at the beginning of the list
+
+        // Save the updated moodData array back to localStorage
+        localStorage.setItem('moodData', JSON.stringify(moodData));
+
+        // Clear the input field
+        document.getElementById('mood').value = '';
+
+        // Update the displayed mood log
+        displayMoodData();
+    } else {
+        alert('Please enter your mood!');
+    }
 });
 
-async function getMoods() {
-  const token = 'user_token'; // Replace with actual token from login
-  
-  const res = await fetch(`http://localhost:5000/getMoods?token=${token}`);
-  const moods = await res.json();
-  
-  const moodHistoryDiv = document.getElementById('moodHistory');
-  moodHistoryDiv.innerHTML = '';
-  
-  moods.forEach(mood => {
-    const div = document.createElement('div');
-    div.textContent = `${mood.mood} - ${new Date(mood.date).toLocaleDateString()}`;
-    moodHistoryDiv.appendChild(div);
-  });
+function displayMoodData() {
+    // Get mood data from localStorage
+    let moodData = JSON.parse(localStorage.getItem('moodData')) || [];
+
+    const moodList = document.getElementById('mood-list');
+    moodList.innerHTML = ''; // Clear the existing list
+
+    // Loop through the moodData array and display each entry
+    moodData.forEach(entry => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${entry.date}: ${entry.mood}`;
+        moodList.appendChild(listItem);
+    });
 }
 
-getMoods();
-// moodtracker.js
-document.getElementById('moodForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form from submitting the traditional way
-
-  const mood = document.getElementById('moodSelect').value;
-
-  // Create an object to send in the request body
-  const moodData = {
-      mood: mood
-  };
-
-  // Fetch API request to send mood data to the server
-  fetch('https://your-api-url.com/mood', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(moodData),
-  })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          // Display mood history or success message
-          document.getElementById('moodHistory').innerHTML = `Mood tracked: ${mood}`;
-      } else {
-          alert("Failed to track mood: " + data.message);
-      }
-  })
-  .catch(error => {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
-  });
-});
+// Display the existing mood data when the page loads
+document.addEventListener('DOMContentLoaded', displayMoodData);

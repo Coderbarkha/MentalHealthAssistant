@@ -1,0 +1,225 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    background-color: #f7f7f7; /* Light background color */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+}
+
+/* Page Container */
+.page-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #ffffff; /* White background for navigation */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 30px;
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    color: #0066cc; /* Blue color on hover */
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e0f7fa; /* Light cyan background */
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0066cc; /* Blue color for heading */
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #444; /* Dark gray for subheading */
+    margin-bottom: 30px;
+}
+
+.signup-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.signup-form-container h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0066cc; /* Focus border color */
+    background-color: #fff;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #0066cc; /* Primary blue color */
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background-color: #004999; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #3e7a87;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #3e7a87;
+}
+
+.footer-bottom {
+    background-color: #3e7a87; /* Dark blue for footer bottom */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .signup-form-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 12px;
+    }
+}

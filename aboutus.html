@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-    <link rel="stylesheet"href="chatbot.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="aboutus.css">
+
 <body>
+    <!-- Navigation -->
     <nav class="navigation">
-        <a href="homepage.html" target="_self">Home</a>
-        <a href="aboutus.html" target="_self">About Us</a>
-        <a href="resources.html" target="_self">Resources</a>
-        <a href="contactus.html" target="_self">Contact Us</a>
-        <a href="moodtracker.html" target="_self">Mood Tracker</a>
-        <!-- Login/Signup -->
-        <a href="loginform.html" target="_self">Login</a> /
-        <a href="signupform.html" target="_self">Signup</a>
+        <a href="homepage.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="moodtracker.html">Mood Tracker</a>
+        <a href="signupform.html">Signup</a>
     </nav>
 
-<h3>About Us Content</h3>  
+    <!-- About Us Content -->
+    <section class="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>
+                We are a dedicated team committed to promoting mental health awareness and providing support to individuals
+                navigating through emotional and psychological challenges.
+            </p>
 
-<h4>Who We Are</h4>  
-We are a dedicated team committed to promoting mental health awareness and providing support to individuals navigating through emotional and psychological challenges. Our mission is to create a safe, inclusive, and supportive space for everyone to explore their mental well-being.  
+            <div class="about-image">
+                <img src="team.webp" alt="Our Team" class="team-img">
+            </div>
 
-<h4>Our Vision</h4>  
-To break the stigma around mental health and empower individuals to take charge of their emotional wellness by providing accessible resources, tools, and support systems.  
+            <h2>Our Vision</h2>
+            <p>
+                To break the stigma around mental health and empower individuals to take charge of their emotional wellness.
+            </p>
 
-<h4>What We Offer</h4>  
- <h5>Supportive Chat Platform</h5>: A safe space where users can share their thoughts and feelings, and access guidance tailored to their needs.  
- <h5>Resources Hub</h5>: Expert-curated articles, tips, and strategies to manage stress, anxiety, and other mental health challenges.  
- <h5>Grief and Healing Tools</h5>: Interactive tools and exercises designed to help users navigate grief and emotional distress.  
-
-<h4>Why We Care</h4>  
-Mental health is as important as physical health. Our application was born out of the belief that no one should feel alone in their struggles. We aim to provide hope, support, and resources to help individuals thrive.
-<br><br><br><br><br>
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-section about">
-            <h3>About Us</h3>
-            <p>We are dedicated to supporting mental health awareness and providing resources to help you thrive.</p>
-        </div>
-        <div class="footer-section links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="aboutus.html" target="_self">About Us</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section contact">
-            <h3>Contact Us</h3>
-            <p>Email: support@mentalhealth.com</p>
-            <p>Phone: +1 123-456-7890</p>
-            <div class="social-icons">
-                <a href="https://Facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://twitter.com/"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="https://instagram.com/"><img src="instagram-icon.jfif" alt="Instagram"></a>
+            <h2>What We Offer</h2>
+            <div class="offerings">
+                <div class="offering">
+                    <img src="chat-patform.avif" alt="Supportive Chat Platform" class="offering-img">
+                    <h3>Supportive Chat Platform</h3>
+                    <p>A safe space for sharing thoughts and accessing guidance.</p>
+                </div>
+                <div class="offering">
+                    <img src="resource-hub.avif" alt="Resources Hub" class="offering-img">
+                    <h3>Resources Hub</h3>
+                    <p>Articles, tips, and strategies for managing mental health.</p>
+                </div>
+                <div class="offering">
+                    <img src="grief.avif" alt="Grief and Healing Tools" class="offering-img">
+                    <h3>Grief and Healing Tools</h3>
+                    <p>Interactive exercises to navigate emotional distress.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Your Mental Health. All rights reserved.</p>
-    </div>
-</footer>
-<!-- Chatbot Section -->
-<section id="chatbot" class="section">
-    <!-- Chat Button to open the chat -->
-    <button id="chatButton">
-        <img src="chatbot.webp" alt="Chat Icon" id="chatIcon">
-    </button>
+    </section>
 
-    <!-- Chatbox that contains the Dialogflow iframe -->
-    <div id="chatbox" class="hidden">
-        <!-- Dialogflow Chatbot iframe -->
-        <iframe
-            width="350"
-            height="430"
-            allow="microphone;"
-            id="dialogflow-iframe"
-            src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"
-            style="border:none;"></iframe>
-        
-        <!-- Close Button -->
-        <button id="close-chat">Close</button>
-    </div>
-</section>
-
-<!-- Chat Button (Visible Always) -->
-<!--<button id="chatButton">
-<img src="chatbot.webp" alt="Chat Button" />
-</button>-->
-<script src="chatbot.js"></script>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your mental health is our priority. Let's build a better tomorrow, together.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@mentalhealth.com</p>
+                <p>Phone: +1 123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

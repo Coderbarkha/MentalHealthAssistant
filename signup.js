@@ -1,4 +1,11 @@
-// signup.js
+
+
+//const express= require('express');
+
+//const router=express.Router();
+
+const User=require('./user');
+const router=express.Router();
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting the traditional way
 
@@ -6,6 +13,10 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
     const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+    console.log("barkha,barkhathakkar@gmail.com,coding123", { name, email, password });
+    alert("Signup successful! Redirecting to homepage...");
+    window.location.href = "homepage.html";
 
     // Check if passwords match
     if (password !== confirmPassword) {
@@ -21,7 +32,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     };
 
     // Fetch API request to send signup data to the server
-    fetch('https://your-api-url.com/signup', {
+    fetch('https://myapp-api.com/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -32,7 +43,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     .then(data => {
         if (data.success) {
             // Redirect to login page or home page after successful signup
-            window.location.href = "loginform.html";
+            window.location.href = "homepage.html";
         } else {
             alert("Signup failed: " + data.message);
         }

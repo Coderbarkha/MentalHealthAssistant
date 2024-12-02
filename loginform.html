@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet"href="chatbot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="formstyle.css">
-    <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
     <header>
@@ -15,23 +19,23 @@
             <a href="resources.html">Resources</a>
             <a href="contactus.html">Contact Us</a>
             <a href="moodtracker.html">Mood Tracker</a>
-            <a href="loginform.html">Login</a> /
+            <a href="loginform.html">Login</a> / 
             <a href="signupform.html">Signup</a>
         </nav>
     </header>
 
-    <section id="login-form">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="login-email">Email:</label>
-            <input type="email" id="login-email" name="email" required>
-            
-            <label for="login-password">Password:</label>
-            <input type="password" id="login-password" name="password" required>
-            
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
             <button type="submit">Login</button>
         </form>
-    </section>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -42,9 +46,8 @@
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="homepage.html">Home</a></li>
                     <li><a href="aboutus.html" target="_self">About Us</a></li>
-                    <li><a href="chat.html">Chat</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
@@ -54,7 +57,7 @@
                 <p>Email: support@mentalhealth.com</p>
                 <p>Phone: +1 123-456-7890</p>
                 <div class="social-icons">
-                    <a href="https://facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="https://Facebook.com/"><img src="facebook-icon.png" alt="Facebook"></a>
                     <a href="https://twitter.com/"><img src="twitter-icon.png" alt="Twitter"></a>
                     <a href="https://instagram.com/"><img src="instagram-icon.jfif" alt="Instagram"></a>
                 </div>
@@ -64,36 +67,34 @@
             <p>&copy; 2024 Your Mental Health. All rights reserved.</p>
         </div>
     </footer>
-    <script src="signup.js"></script>
-<!-- Chatbot Section -->
-<section id="chatbot" class="section">
-    <!-- Chat Button to open the chat -->
-    <button id="chatButton">
-        <img src="chatbot.webp" alt="Chat Icon" id="chatIcon">
-    </button>
-
-    <!-- Chatbox that contains the Dialogflow iframe -->
-    <div id="chatbox" class="hidden">
-        <!-- Dialogflow Chatbot iframe -->
-        <iframe
-            width="350"
-            height="430"
-            allow="microphone;"
-            id="dialogflow-iframe"
-            src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"
-            style="border:none;"></iframe>
-        
-        <!-- Close Button -->
-        <button id="close-chat">Close</button>
-    </div>
-</section>
-
-<!-- Chat Button (Visible Always) -->
-<!--<button id="chatButton">
-<img src="chatbot.webp" alt="Chat Button" />
-</button>-->
-<script src="chatbot.js"></script>
-
-    <script src="login.js"></script>
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="section">
+        <!-- Chat Button to open the chat -->
+        <button id="chatButton">
+            <img src="chatbot.webp" alt="Chat Icon" id="chatIcon">
+        </button>
+    
+        <!-- Chatbox that contains the Dialogflow iframe -->
+        <div id="chatbox" class="hidden">
+            <!-- Dialogflow Chatbot iframe -->
+            <iframe
+                width="350"
+                height="430"
+                allow="microphone;"
+                id="dialogflow-iframe"
+                src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"
+                style="border:none;"></iframe>
+            
+            <!-- Close Button -->
+            <button id="close-chat">Close</button>
+        </div>
+    </section>
+    
+    <!-- Chat Button (Visible Always) -->
+    <!--<button id="chatButton">
+    <img src="chatbot.webp" alt="Chat Button" />
+    </button>-->
+    <script src="chatbot.js"></script>
+    
 </body>
 </html>
