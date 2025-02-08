@@ -6,18 +6,23 @@
     <title>Mental Health Matters</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="homestyle.css">
+    <!-- Chat Button Stylesheet -->
+    <link rel="stylesheet" href="chatbutton.css">
 </head>
 <body>
 
     <!-- Navigation Menu -->
     <header>
+        
         <nav class="navbar">
             <ul>
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="aboutus.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="contactus.html">Feedback</a></li>
                 <li><a href="moodtracker.html">Mood Tracker</a></li>
                 <li><a href="signupform.html">Signup</a></li>
             </ul>
@@ -28,7 +33,7 @@
     <section class="hero">
         <h1>Your Mental Health Matters</h1>
         <p>Focus on your mental health and wellbeing. Take steps to feel better every day.</p>
-        <img src="mh1.jfif" alt="Mental Health Image" class="hero-img"> <!-- Correct Image Placement -->
+        <img src="mh1.jfif" alt="Mental Health Image" class="hero-img">
     </section>
 
     <!-- Mental Health Quotes Section -->
@@ -86,6 +91,23 @@
             <p>&copy; 2024 Mental Health. All rights reserved.</p>
         </div>
     </footer>
+
+   <!-- Chatbot Button and Window -->
+<div id="chatbot-container">
+    <button id="chatbot-button" onclick="toggleChat()">💬</button>
+    <div id="chatbot-window">
+     <button onclick="toggleChat()" style="float: right; background: none; border: none; color: white; font-size: 16px; cursor: pointer;">✖</button></h3>
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"></iframe>
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        const chatbotWindow = document.getElementById('chatbot-window');
+        chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+    
 
 </body>
 </html>
