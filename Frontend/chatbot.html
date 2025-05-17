@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="chatbutton.css">
+    </head>
+    <body>
+<!-- Chatbot Button and Window -->
+<div id="chatbot-container">
+    <button id="chatbot-button" onclick="toggleChat()">💬</button>
+    <div id="chatbot-window">
+     <button onclick="toggleChat()" style="float: right; background: none; border: none; color: white; font-size: 16px; cursor: pointer;">✖</button></h3>
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e9440690-3629-44a1-aa3e-4678d607cdf9"></iframe>
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        const chatbotWindow = document.getElementById('chatbot-window');
+        chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+    </body>
+</body>
+</html>
